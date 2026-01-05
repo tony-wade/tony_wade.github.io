@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
-
+/* Global reset for clean layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 主體色調與置中: quiet, minimal */
 body {
   font-family: 'Inter', sans-serif;
   background: #fafafa;
@@ -13,21 +14,29 @@ body {
   text-align: center;
 }
 
+/* =====================
+   標題 + 副標題
+===================== */
 .header {
-  padding: 36px 0;
+  padding: 36px 0;    /*空行高度*/
 }
-
-.header h1 {
-  font-size: 2.8rem;
+ 
+ /* 標題風格 */
+.header h1 { 
+  font-size: 2.8rem; 
   font-weight: 400;
 }
 
+/* 副標題風格 */
 .tagline {
-  margin-top: 8px;
+  margin-top: 8px; /* small gap below title */
   font-size: 1rem;
-  color: #666;
+  color: #666; /* muted text for subtlety */
 }
 
+/* =====================
+   主頁大圖
+===================== */
 .hero img {
   width: 100%;
   max-width: 800px;
