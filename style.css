@@ -7,13 +7,14 @@
 }
 
 /* 主體色調與置中: quiet, minimal */
-body {
+body, html {
   font-family: 'Inter', sans-serif;
   background: #fafafa;
   color: #111;
   text-align: center;
 }
 
+ 
 /* =====================
    標題 + 副標題
 ===================== */
@@ -35,47 +36,47 @@ body {
 }
 
 /* =====================
-   主頁大圖
+   主頁背景圖
 ===================== */
-.hero img {
-  width: 100%;
-  max-width: 800px;
-  margin: 24px auto;    /* 上下&左右邊界 */
-  display: block;      /* type */
-  border-radius: 8px;    /* 園角 */
+.hero-bg {
+  background: url('../images/1.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 半透明黑色 */
+.overlay {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35); /* 讓文字更清楚 */
+  padding: 40px;
+  border-radius: 12px;
 }
 
 /* =====================
    選項欄
 ===================== */
 .categories {
-  margin-top: 24px;           /* 主頁圖下的距離*/
+  margin-top: 24px;           /* 與頂部距離*/
   display: flex;
   justify-content: center;    /* 置中 */
   gap: 16px;                  /* 選項間距 */
   flex-wrap: wrap;            /* 一排,但在小螢幕會換成多排 */
 }
-
+ 
 .categories a {
-  text-decoration: none;      /* 取消默認之底線 */
-  color: #111;                /* 選項顏色 */
-  width: 120px;
-  font-size: 0.9rem;
+  text-decoration: none;     /* 取消默認之底線 */
+  color: #fff;               /* 選項顏色 */
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 6px;         /* 選項圖的圓角 */
+  transition: 0.3s;            /* 效果 */
 }
 
-/* 滑鼠在圖上的特效 */
-.categories img {
-  width: 100%;
-  border-radius: 4px;         /* 選項圖的圓角 */
-  transition: 0.3s ease;      /* 效果 */
+.categories a:hover {
+  background: rgba(255,255,255,0.2);     /* 變亮 */
 }
-
-.categories img:hover {
-  opacity: 0.8;                /* 透明度 */
-  transform: scale(1.05);      /* 放大 */
-}
-
-.categories span {
-  display: block;
-  margin-top: 8px;             /* 選項圖與選項間距 */
-}
+  
